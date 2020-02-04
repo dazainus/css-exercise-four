@@ -1,4 +1,94 @@
+/** Box-sizing hack **/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+/** Default condition **/
 body {
   background-color: #dadada;
   font-size: 10px;
+}
+
+h1 {
+ font-family: 'Source Serif Pro', Times, serif;
+ font-size: 3em;
+ line-height: 1.5;
+}
+
+.header h1 {
+  font-family: 'monteserrat', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 1.6em;
+  padding-bottom: 0px 10px 0px 10px;
+  margin-bottom: 30px;
+}
+
+
+/** Subejct to change according to media queries **/
+/** Media query: Mobile **/
+.container{
+  margin-top: 40px;
+  width: 100%;
+}
+
+.preview-baku, .preview-london, .preview-madrid, .preview-rome {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 300px;
+  padding: 15px 30px 15px 30px;
+  background-size: cover;
+}
+
+
+/** Media query: Tablet **/
+@media screen and (min-width:575px) {
+  .container {
+    margin: 40px auto;
+    width: 80%;
+  }
+
+  .preview-baku, .preview-london, .preview-madrid, .preview-rome {
+    display: inline-block;
+    margin: 5px;
+    width: 47%;
+    height: 200px;
+  }
+}
+
+
+/** Media query: Laptop **/
+@media screen and (min-width:991px) {
+  .container{
+    margin: 40px auto;
+    width: 80%;
+  }
+
+  .preview-baku, .preview-london, .preview-madrid, .preview-rome {
+    display: inline-block;
+    margin: 5px;
+    width: 23%;
+    height: 200px;
+  }
+}
+
+
+/** Bg image source code = Not subject to change **/
+.preview-baku {
+  background-image: url("../images/baku.jpg");
+}
+
+.preview-london {
+  background-image: url("../images/london.png");
+}
+
+.preview-madrid {
+  background-image: url("../images/madrid.jpg");
+}
+
+.preview-rome {
+  background-image: url("../images/rome.jpg");
 }
